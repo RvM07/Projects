@@ -506,15 +506,12 @@ soundToggle.addEventListener('click', () => {
   soundToggle.innerHTML = isSoundEnabled ? '<i class="fas fa-volume-up"></i>' : '<i class="fas fa-volume-mute"></i>';
   saveSoundPreference();
 });
-
-// Stats panel toggle functionality
-function toggleStatsPanel() {
-  updateStats();
-  const panel = document.getElementById('statsPanel');
-  panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
-}
-
-statsToggle.addEventListener('click', toggleStatsPanel);
+statsToggle.addEventListener('click', () => {
+  statsPanel.classList.toggle('hidden');
+  if (!statsPanel.classList.contains('hidden')) {
+    updateStats();
+  }
+});
 pomodoroStart.addEventListener('click', startPomodoro);
 pomodoroReset.addEventListener('click', resetPomodoro);
 undoTaskBtn.addEventListener('click', undoLastComplete);
@@ -529,9 +526,6 @@ filterCategory.addEventListener('change', e => {
   selectedCategory = e.target.value;
   renderTasks();
 });
-document.getElementById('closeStats').addEventListener('click', () => {
-  toggleStatsPanel();
-});
 
 // Keyboard shortcuts
 document.addEventListener('keydown', e => {
@@ -539,8 +533,10 @@ document.addEventListener('keydown', e => {
     e.preventDefault();
     taskInput.focus();
   }
-  if (e.key === 'Escape' && statsPanel.style.display === 'block') {
-    toggleStatsPanel();
+  if (e.key === 'Escape') {
+    taskInput.blur();
+    suggestionsBox.classList.remove('active');
+    statsPanel.classList.add('hidden');
   }
 });
 
@@ -552,7 +548,5 @@ function init() {
   renderTasks();
   updateProgress();
   updatePomodoroDisplay();
-  // Ensure stats panel is hidden initially
-  statsPanel.style.display = 'none';
 }
-init();
+init(); 
