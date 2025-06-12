@@ -1,21 +1,23 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-html , body{
+
+html,
+body {
     height: 100%;
     width: 100%;
 }
 
-main{
+main {
     height: 100%;
     width: 100%;
     background-color: beige;
 }
 
-nav{
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,11 +25,11 @@ nav{
     background-color: #333;
 }
 
-nav img{
+nav img {
     height: 60px;
 }
 
-nav ul{
+nav ul {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -37,24 +39,24 @@ nav ul{
     cursor: pointer;
 }
 
-nav ul li:hover{
+nav ul li:hover {
     transform: translateY(-5px);
     transition: all 0.3s ease;
 }
 
-main>h1{
+main>h1 {
     text-align: center;
     font-size: 7vh;
     padding-top: 40px;
 }
 
-#hero h2{
+#hero h2 {
     text-align: center;
     font-size: 5vh;
     padding: 20px;
 }
 
-#products{
+#products {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,7 +64,7 @@ main>h1{
     gap: 20px;
 }
 
-#product1{
+#product1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -79,7 +81,7 @@ main>h1{
     padding: 20px;
 }
 
-#product2{
+#product2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -93,7 +95,7 @@ main>h1{
     padding: 20px;
 }
 
-#product3{
+#product3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -110,7 +112,7 @@ main>h1{
     padding: 20px;
 }
 
-.btn{
+.btn {
     background-color: #111;
     color: #fff;
     padding: 10px 20px;
@@ -119,8 +121,24 @@ main>h1{
     cursor: pointer;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: #333;
-    transform: translateY(-5px);    
+    transform: translateY(-5px);
     transition: all 0.3s ease;
+}
+
+.products::-webkit-scrollbar {
+    display: none;
+}
+
+.categories::-webkit-scrollbar {
+    display: none;
+}
+
+.populars::-webkit-scrollbar {
+    display: none;
+}
+
+.shader {
+    background: linear-gradient(to right bottom, #69628a, #040309);
 }

@@ -5,12 +5,14 @@
   columns: 6;
   column-gap: 20px;
 }
+
 .container .box {
   width: 100%;
   margin-bottom: 10px;
   break-inside: avoid;
   border-radius: 15px;
 }
+
 .container .box img {
   max-width: 100%;
   min-width: 100%;
@@ -33,6 +35,7 @@ img:hover {
     width: calc(100% - 40px);
   }
 }
+
 @media (max-width: 1200px) {
   .container {
     columns: 4;
