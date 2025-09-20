@@ -1,0 +1,49 @@
+/* General Styles */
+body {
+  font-family: 'poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+}
+
+.navbar-brand img {
+  margin-right: 10px;
+}
+
+h1, h2, h3, h4 {
+  color: #0d6efd;
+}
+
+p{
+  font-size: 20px;
+}
+
+section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+footer {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.card img {
+  object-fit: cover;
+  height: 200px;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Gallery Grid */
+.gallery-img {
+  height: 250px;
+  object-fit: cover;
+}
